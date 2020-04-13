@@ -6,7 +6,7 @@ services:
       context: ./nglancerstatic
       dockerfile: nglancerstatic.Dockerfile
     ports:
-      - '8081:8081'
+      - '8081:8080'
 networks:
   default:
     external:
