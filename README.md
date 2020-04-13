@@ -1,5 +1,5 @@
-# Neuroglancer Frame
-This is a small `docker` + `docker-compose` based solution for running the [neuroglancer volumetric viewer](https://github.com/seung-lab/neuroglancer). 
+# Neuroglancer Docker 
+This is a small `docker` + `docker-compose` based solution for running a containerized version of the [neuroglancer volumetric viewer](https://github.com/google/neuroglancer). 
 
 ## Requirements
 * Docker: A modern version of [docker appropriate to the OS](https://docs.docker.com/install/#supported-platforms) needs to be installed.
