@@ -5,10 +5,10 @@
 
 
 #clear out the docker containers (running or not) relevant to this project
-docker rm -f $(docker ps -a | grep "nglancerstatic" | awk '{print $1}')
-docker-compose build
+docker rm -f $(docker ps -a | grep "nglancerstatic-dev" | awk '{print $1}')
+docker-compose -f docker-compose-dev.yml build 
 
 ## cleanup network to make sure a good fresh one exists
-docker network rm nglancer
+docker network rm lightserv-dev
 
-docker network create --attachable nglancer
+docker network create --attachable lightserv-dev

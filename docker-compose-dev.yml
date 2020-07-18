@@ -1,0 +1,14 @@
+version: '3.4'
+services:
+  nglancerstatic-dev:
+    env_file: .env
+    build:
+      context: ./nglancerstatic_dev
+      dockerfile: nglancerstatic_dev.Dockerfile
+    ports:
+      - '8083:8080'
+    restart: always
+networks:
+  default:
+    external:
+      name: lightserv-dev

@@ -10,11 +10,10 @@ RUN apt install nodejs -y
 
 # clone neuroglacner
 
-WORKDIR /opt
+ADD https://api.github.com/repos/BrainCOGS/neuroglancer/git/refs/heads/master version.json
+RUN git clone -b master https://github.com/BrainCOGS/neuroglancer.git /opt/nglancerstatic
 
-RUN git clone https://github.com/BrainCOGS/neuroglancer.git nglancer
-
-WORKDIR /opt/nglancer
+WORKDIR /opt/nglancerstatic
 
 # Install the dependencies required by neuroglancer
 
