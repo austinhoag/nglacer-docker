@@ -8,7 +8,6 @@
 docker rm -f $(docker ps -a | grep "nglancerstatic-dev" | awk '{print $1}')
 docker-compose -f docker-compose-dev.yml build 
 
-## cleanup network to make sure a good fresh one exists
-docker network rm lightserv-dev
+## Make dev network if it doesn't already exist
 
 docker network create --attachable lightserv-dev

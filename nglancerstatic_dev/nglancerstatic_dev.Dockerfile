@@ -10,8 +10,8 @@ RUN apt install nodejs -y
 
 # clone neuroglacner
 
-ADD https://api.github.com/repos/BrainCOGS/neuroglancer/git/refs/heads/master version.json
-RUN git clone -b master https://github.com/BrainCOGS/neuroglancer.git /opt/nglancerstatic
+ADD https://api.github.com/repos/austinhoag/neuroglancer/git/refs/heads/master version.json
+RUN git clone -b master https://github.com/austinhoag/neuroglancer.git /opt/nglancerstatic
 
 WORKDIR /opt/nglancerstatic
 
@@ -19,6 +19,6 @@ WORKDIR /opt/nglancerstatic
 
 RUN npm i
 
-# Run the dev server (--host=0.0.0.0,--port=8081)
+# Run the dev server (--host=0.0.0.0,--port=8080)
 
 CMD npm run dev-server-python
