@@ -7,7 +7,5 @@
 docker rm -f $(docker ps -a | grep "nglancerstatic-prod" | awk '{print $1}')
 docker-compose -f docker-compose-prod.yml build 
 
-## cleanup network to make sure a good fresh one exists
-docker network rm lightserv-prod
-
+# Create network if it does not already exist
 docker network create --attachable lightserv-prod

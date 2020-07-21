@@ -12,7 +12,7 @@ RUN apt install nodejs -y
 
 WORKDIR /opt
 
-RUN git clone https://github.com/BrainCOGS/neuroglancer.git nglancerstatic
+RUN git clone https://github.com/austinhoag/neuroglancer.git nglancerstatic
 
 WORKDIR /opt/nglancerstatic
 
@@ -20,6 +20,6 @@ WORKDIR /opt/nglancerstatic
 
 RUN npm i
 
-# Run the dev server (--host=0.0.0.0,--port=8081)
+# Run the dev server (--host=0.0.0.0,--port=8080)
 
 CMD npm run dev-server-python
