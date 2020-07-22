@@ -8,7 +8,7 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 # Get node.js
 RUN apt install nodejs -y
 
-# clone neuroglacner
+# clone neuroglancer -- the ADD line will catch updates to the repo and rebuild this image if master branch of rpo is changed
 
 ADD https://api.github.com/repos/austinhoag/neuroglancer/git/refs/heads/master version.json
 RUN git clone -b master https://github.com/austinhoag/neuroglancer.git /opt/nglancerstatic
